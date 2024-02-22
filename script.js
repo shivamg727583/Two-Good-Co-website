@@ -114,3 +114,28 @@ gsap.to(".nav1 svg",{
 
 navigationAnimation()
 
+
+//////////////// responsive menu 
+function mobileNavbar(){
+    var check=0;
+document.querySelector(".menu").addEventListener("click",function(){
+  if(check==0){
+    document.querySelector(".navbar").style.height=`100vh`;
+    document.querySelector(".navbar").style.backgroundColor=`black`;
+    document.querySelector(".navbar").style.color=`white`;
+     document.querySelector('.link').style.opacity=1;
+check=1; 
+document.querySelector(".menu").innerHTML=`<i class="ri-close-line"></i>`
+  }
+  else{
+    document.querySelector(".navbar").style.height=`120px`;
+    document.querySelector(".navbar").style.backgroundColor=`transparent`;
+    document.querySelector(".navbar").style.color=`black`;
+     document.querySelector('.link').style.opacity=0;
+document.querySelector(".menu").innerHTML=`<i class="ri-menu-line"></i>`
+check=0;
+ 
+  }
+})
+}
+mobileNavbar()
